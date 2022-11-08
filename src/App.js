@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider } from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react';
+import Board from "./components/board/board";
+import { TaskProvider } from "./context/task.context";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <TaskProvider>
+        <Heading
+        fontSize={{base : '2xl', sm: '3xl', md: '4xl'}}
+        textAlign='center'>
+          KANBAN BOARD
+        </Heading>
+        <Board></Board>
+      </TaskProvider>
+    </ChakraProvider>
   );
 }
 
