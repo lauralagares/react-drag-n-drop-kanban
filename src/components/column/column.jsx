@@ -34,7 +34,8 @@ function Column({ columnName, column }) {
                             fontSize={{ base: '0.5rem', md: '1rem' }}
                             variant="subtle"
                             rounded="md"
-                            p={1}>
+                            p={1}
+                            bgColor={column.color}>
                             {column.title}
                         </Badge>
                     </Heading>
