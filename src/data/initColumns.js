@@ -7,7 +7,6 @@ export const initialColumns = {
     'In Progress': {
       title : 'In Progress',
       id: 'In Progress',
-      color: 'orange',
       items: []
     },
     'Done': {

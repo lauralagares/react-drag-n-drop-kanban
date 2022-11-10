@@ -26,11 +26,12 @@ function Task({ t, i, columnName }) {
                     ref={provided.innerRef}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
-                    bgColor={'yellow.100'}
+                    bgColor={t.color}
                     rounded="lg"
                     w={"100%"}
                     minH={100}
-                    boxShadow="xl">
+                    boxShadow="xl"
+                    position="relative">
 
                     <Textarea
                         as={ResizeTextarea}
@@ -41,12 +42,21 @@ function Task({ t, i, columnName }) {
                         w={"85%"}
                         minH={50}
                         fontSize={{ base: '0.5rem', md: '1rem' }}
-                        fontWeight="semibold">
+                        fontWeight="semibold"
+                        >
                     </Textarea>
 
                     <IconButton
                         icon={<DeleteIcon></DeleteIcon>}
-                        onClick={handleDelete}>
+                        onClick={handleDelete}
+                        colorScheme="solid"
+                        color={'gray.900'}
+                        position="absolute"
+                        top={0}
+                        right={0}
+                        zIndex={100}
+                        size={{base: "xs", md: "md"}}
+                        >
                     </IconButton>
 
                 </Box>

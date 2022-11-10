@@ -31,7 +31,7 @@ function Column({ columnName, column }) {
                 >
                     <Heading textAlign="center">
                         <Badge
-                            fontSize={{ base: '0.7rem', sm: '0.8rem', md: '0.9rem' }}
+                            fontSize={{ base: '0.5rem', md: '1rem' }}
                             variant="subtle"
                             rounded="md"
                             p={1}>

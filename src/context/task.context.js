@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import { initialColumns } from "../data/initColumns";
+import { pickRandomColor } from "../data/pickRandomColor";
 
 const TaskContext = createContext();
 
@@ -17,6 +18,7 @@ const TaskProvider = ({ children }) => {
         const newTask = {
             taskTitle : `New ${columnName} Task`,
             id : uuidv4(),
+            color: pickRandomColor(".200")
         }
     
         const selectedColumn = columns[columnName]
