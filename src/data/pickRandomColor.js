@@ -1,16 +1,11 @@
 const colors = [
-    'red',
-    'orange',
-    'yellow',
-    'green',
-    'teal',
-    'blue',
-    'cyan',
-    'purple',
-    'pink',
-  ];
+  '#8ef6e4',
+  '#9896f1',
+  '#d59bf6',
+  '#edb1f1',
+];
 
-export function pickRandomColor (variant = '') {
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    return color + variant;
-  }
+export function pickRandomColor() {
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  return color;
+}
