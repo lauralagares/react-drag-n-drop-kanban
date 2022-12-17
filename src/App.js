@@ -10,8 +10,7 @@ function App() {
         <Heading
         fontSize={{base : '2xl', sm: '3xl', md: '4xl'}}
         textAlign='center'
-        marginBottom={2}
-        >
+        marginBottom={2}>
          Drag-and-Drop Kanban Board 📃✔️
         </Heading>
         <Board></Board>
