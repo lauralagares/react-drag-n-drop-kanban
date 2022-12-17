@@ -49,7 +49,7 @@ function Column({ columnName, column }) {
                     </IconButton>
 
                     <Stack
-                        h={{ base: "130px", md: "70vh" }}
+                        h={{ base: "8rem", md: "70vh" }}
                         p={4}
                         mt={2}
                         spacing={4}

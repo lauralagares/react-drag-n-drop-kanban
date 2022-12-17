@@ -8,10 +8,11 @@ function App() {
     <ChakraProvider>
       <TaskProvider>
         <Heading
-        fontSize={{base : '2xl', sm: '3xl', md: '4xl'}}
+        fontSize={{base : '1rem', sm: '1.5rem', md: '2rem'}}
         textAlign='center'
+        marginTop={2}
         marginBottom={2}>
-         Drag-and-Drop Kanban Board 📃✔️
+         Drag-and-Drop Kanban Board ✔️
         </Heading>
         <Board></Board>
       </TaskProvider>
