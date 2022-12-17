@@ -1,6 +1,6 @@
 import { React, useContext } from 'react';
 import { TaskContext } from '../../context/task.context';
-import { Container, SimpleGrid, Stack } from '@chakra-ui/react';
+import { Container, Stack } from '@chakra-ui/react';
 import Column from '../column/column';
 import { DragDropContext } from 'react-beautiful-dnd';
 
