@@ -39,9 +39,8 @@ function Task({ t, i, columnName }) {
                         value={t.taskTitle}
                         border="none"
                         resize="none"
-                        w={"85%"}
+                        w={"100%"}
                         minH={50}
-                        fontSize={{ base: '0.5rem', md: '1rem' }}
                         fontWeight="semibold"
                         >
                     </Textarea>
@@ -55,8 +54,7 @@ function Task({ t, i, columnName }) {
                         top={0}
                         right={0}
                         zIndex={100}
-                        size={{base: "xs", md: "md"}}
-                        >
+                        size={"md"}>
                     </IconButton>
 
                 </Box>

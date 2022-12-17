@@ -25,7 +25,8 @@ function Column({ columnName, column }) {
         <Droppable key={column.id} droppableId={column.id}>
 
             {(provided) => (
-                <Box
+                <Box 
+                w={{md:"33%"}}
                 ref={provided.innerRef}
                 {...provided.droppableProps}
                 >
@@ -39,22 +40,24 @@ function Column({ columnName, column }) {
                             {column.title}
                         </Badge>
                     </Heading>
+
                     <IconButton
                         icon={<AddIcon />}
                         onClick={handleAddTask}
                         w="full"
                         size="xs">
-
                     </IconButton>
+
                     <Stack
-                        minHeight="70vh"
+                        h={{ base: "130px", md: "70vh" }}
                         p={4}
                         mt={2}
                         spacing={4}
                         bgColor="gray.50"
                         rounded="lg"
                         boxShadow="md"
-                        overflow="auto">
+                        overflow="auto"
+                        >
                         {
                             column.items.map((t, i) => {
                                 return (<Task t={t} key={t.id} columnName={columnName} i={i}></Task>)

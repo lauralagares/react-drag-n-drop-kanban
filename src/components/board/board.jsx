@@ -1,6 +1,6 @@
 import { React, useContext } from 'react';
 import { TaskContext } from '../../context/task.context';
-import { Container, SimpleGrid } from '@chakra-ui/react';
+import { Container, SimpleGrid, Stack } from '@chakra-ui/react';
 import Column from '../column/column';
 import { DragDropContext } from 'react-beautiful-dnd';
 
@@ -56,7 +56,9 @@ function Board() {
   return (
     <DragDropContext onDragEnd={result => handleOnDragEnd(result, columns, setColumns)}>
       <Container maxW='container.lg'>
-        <SimpleGrid columns={{base:3, md:3}} spacing={{ base: 2.5, md: 4 }}>
+        <Stack
+        direction={{ base: 'column', md: 'row' }}
+        justifyContent="center">
           {
             Object.entries(columns).map(([columnName, column]) => {
               return (
@@ -64,7 +66,7 @@ function Board() {
               )
             })
           }
-        </SimpleGrid>
+          </Stack>
       </Container>
     </DragDropContext>
 
